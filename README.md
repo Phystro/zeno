@@ -1,6 +1,6 @@
 # zeno
 
-Linear Algebra library
+Linear Algebra library for C#
 
 ## Vectors
 
