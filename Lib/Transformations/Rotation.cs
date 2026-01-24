@@ -2,6 +2,16 @@ using Lib.Matrices;
 
 namespace Lib.Transformations;
 
+public interface IRotation
+{
+    static abstract Matrix GeneralExtrinsic3DRotation(double alpha, double beta, double gamma);
+    static abstract Matrix GeneralIntrinsic3DRotation(double alpha, double beta, double gamma);
+    static abstract Matrix Rotation2(double theta);
+    static abstract Matrix RotationX(double theta);
+    static abstract Matrix RotationY(double theta);
+    static abstract Matrix RotationZ(double theta);
+}
+
 public static class Rotation
 {
     // Basic 2D Rotation
@@ -28,7 +38,7 @@ public static class Rotation
 
     // Basic 3D Rotation
     /// <summary>
-    /// Rotation of a vector by an angle theta (in radians) about the x-axis.
+    /// Rotation of a vector by an angle theta (in radians) about the x-axis in 3D space.
     /// Use the right-hand-rule.
     /// Corresponds to a Roll rotation
     /// </summary>
@@ -49,7 +59,7 @@ public static class Rotation
     }
 
     /// <summary>
-    /// Rotation of a vector by an angle theta (in radians) about the y-axis.
+    /// Rotation of a vector by an angle theta (in radians) about the y-axis in 3D space.
     /// Use the right-hand-rule.
     /// Corresponds to a Pitch rotation
     /// </summary>
@@ -70,7 +80,7 @@ public static class Rotation
     }
 
     /// <summary>
-    /// Rotation of a vector by an angle theta (in radians) about the z-axis.
+    /// Rotation of a vector by an angle theta (in radians) about the z-axis in 3D space.
     /// Use the right-hand-rule.
     /// Corresponds to Yaw rotation
     /// </summary>

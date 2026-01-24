@@ -1,4 +1,4 @@
-# zeno
+# Zeno
 
 Linear Algebra library for C#
 
@@ -55,6 +55,21 @@ public interface IVector
     Vector Rotate(double radians);
     Vector Scale(double scalar);
     Vector TensorProduct(Vector other);
+}
+```
+ ## Transformations
+
+Rotations in 2D and 3D
+
+```csharp
+public interface IRotation
+{
+    static abstract Matrix GeneralExtrinsic3DRotation(double alpha, double beta, double gamma);
+    static abstract Matrix GeneralIntrinsic3DRotation(double alpha, double beta, double gamma);
+    static abstract Matrix Rotation2(double theta);
+    static abstract Matrix RotationX(double theta);
+    static abstract Matrix RotationY(double theta);
+    static abstract Matrix RotationZ(double theta);
 }
 ```
 

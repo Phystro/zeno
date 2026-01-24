@@ -1,10 +1,6 @@
 
 using QuantumSimulator;
 
-// Console.WriteLine("Hello, World!");
-// QuantumRegister qreg = new QuantumRegister(2);
-// foreach (var ampl in qreg.Amplitudes) Console.WriteLine($"{ampl} => {ampl.Magnitude}");
-
 public static class Program
 {
     public static void Main(string[] args)
